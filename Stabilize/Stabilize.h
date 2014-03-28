@@ -1,18 +1,15 @@
 /*
-  Stabilize.h:
- 
- Kinda implements a PID function, along with some cheesy complementary filters, LPF etc.
- 
+  Stabilize.h 
 */
 #ifndef Stabilize_h
 #define Stabilize_h
 
 #include "Arduino.h"
 
-#define IMUPIN 53          //I receive the IMU reading on this pin, for APM 2.6. For other kits, change the value shrewdly
+#define IMUPIN 53          //you can also try PIN 42, 38 and 25, but they won't work
 
 #define RollSetValue 0    //might be changed to a non-zero value in future
-#define PitchSetValue 0    //right now, I just want this piece of crap to hover horizintally
+#define PitchSetValue 0    //however, the likelihood of these two remaining zero for eternity is very high
 
 #define ROLL_ERROR(roll) (roll - RollSetValue)
 #define PITCH_ERROR(pitch) (pitch - PitchSetValue)

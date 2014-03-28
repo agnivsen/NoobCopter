@@ -1,5 +1,5 @@
 /*
-  BlockingRC.cpp
+  IMU.cpp 	
 */
 
 #include "Arduino.h"
@@ -10,7 +10,7 @@ BlockingRC::BlockingRC()
 }
 
 
-int BlockingRC::setPin(int inputPin)    //set the pin number of the RC object. goes into a global array
+int BlockingRC::setPin(int inputPin)
 {
 lastReadTime = micros();
 if(globalPinCounter<6)
@@ -24,7 +24,7 @@ else
 }
 
 
-bool BlockingRC::removePin(int pinIndex)    //remove the pin from global array
+bool BlockingRC::removePin(int pinIndex)
 {
 	if (pinIndex>=globalPinCounter)
 	{
@@ -57,13 +57,13 @@ bool BlockingRC::removePin(int pinIndex)    //remove the pin from global array
 	}
 }
 
-float BlockingRC::getValue(int pinIndex)        //get the current RC reading for the channel 'pinIndex'
+float BlockingRC::getValue(int pinIndex)
 {
 	//lastReadTime = micros();
 	return pulseIn(pin[pinIndex], HIGH, 25000);
 }
 
-float BlockingRC::getValueWithDelay(int pinIndex, long int delayInMicros)   //get the current RC reading for the channel 'pinIndex', provided that the time elapsed since the last reading was taken is greater than delayInMicros
+float BlockingRC::getValueWithDelay(int pinIndex, long int delayInMicros)
 {
 	long int currentTime = micros();
 	if((currentTime - lastReadTime)>delayInMicros)

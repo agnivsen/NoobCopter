@@ -1,8 +1,5 @@
 /*
-  IMU.h
- 
- Handling the accelerometer and gyro data.
- This acts as a wrapper on the SPI library
+  IMU.h 
 */
 #ifndef IMU_h
 #define IMU_h

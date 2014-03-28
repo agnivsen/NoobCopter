@@ -1,13 +1,12 @@
 /*
-  BlockingRC.h
- For reading the RC channels as part of the user input
+  IMU.h 
 */
 #ifndef BlockingRC_h
 #define BlockingRC_h
 
 #include "Arduino.h"
 
-#define MAXPIN 7        //maximum number of channels supported by my radio controller. Change the number as and when required
+#define MAXPIN 7
 
 
 class BlockingRC

@@ -1,5 +1,5 @@
 /*
-  Stabilize.cpp
+  Stabilize.cpp 	
 */
 
 #include "Arduino.h"
@@ -24,6 +24,11 @@ void Stabilize::updateGain(double kP, double kI, double kD)
 
 double Stabilize::compute(double error)
 {
+
+/* Serial.print((((proportionalError = abs(error)) * _kP) + (integralError * _kI) + (derivativeError * _kD)));
+Serial.print(",");
+Serial.print((((proportionalError = abs(error)) * _kP) + (integralError * _kI)));
+Serial.println(); */
 	return (((proportionalError = abs(error)) * _kP) + (abs(integralError) * _kI) + (derivativeError * _kD));
 }
 
@@ -41,9 +46,10 @@ double Stabilize::getIntegralError()
 void Stabilize::errorCorrection(double proportionalErrorNow,double proportionalErrorBefore,long int timeElapsedInMicros)
 {
 
+	
 	if(abs(proportionalErrorNow)>1)
 	{
-	if(abs(proportionalErrorNow) > abs(proportionalErrorBefore))
+	//if(abs(proportionalErrorNow) > abs(proportionalErrorBefore))
 		{
 			integralError += proportionalErrorNow;
 		}

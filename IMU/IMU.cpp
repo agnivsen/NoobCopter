@@ -1,6 +1,6 @@
 /*
   IMU.cpp 
- */
+*/
 
 #include "Arduino.h"
 #include "SPI.h"
