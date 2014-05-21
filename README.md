@@ -35,3 +35,5 @@ Stick to the code in the master branch, if readability is your concern.
 Right now, I'm not working on this project for the next month or so.
 
 Meanwhile, if you want to tinker with the PID, test it or improve it into something better... you're efforts will be much appreciated.
+
+Before running the NoobCopter.ino file in your Arduino workspace, make sure you import the BlockingRC, IMU and Stabilize as a library.
