@@ -34,6 +34,8 @@ Stick to the code in the master branch, if readability is your concern.
 
 Right now, I'm not working on this project for the next month or so.
 
-Meanwhile, if you want to tinker with the PID, test it or improve it into something better... you're efforts will be much appreciated.
+Meanwhile, if you want to tinker with the PID, test it or improve it into something better... you're efforts will be much appreciated. I must confess that the quality of the flight of the quadrotor using this code definitely needs some fine - tuning. 
 
-Before running the NoobCopter.ino file in your Arduino workspace, make sure you import the BlockingRC, IMU and Stabilize as a library.
+
+==========
+Before running the NoobCopter.ino file in your Arduino workspace, make sure you import the 'BlockingRC', 'IMU' and 'Stabilize' folders as a library.
