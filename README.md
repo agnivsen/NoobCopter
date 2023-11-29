@@ -1,8 +1,6 @@
 NoobCopter
 ==========
 
-- A slightly noob-ish firmware for barebones flight of a quadrotor.
-
 - A fresh PID implementation for stabilizing a quadcopter, based on APM 2.6.
 
 
